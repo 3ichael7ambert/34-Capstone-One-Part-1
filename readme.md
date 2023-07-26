@@ -22,6 +22,10 @@ python webcrawl.py
 
 you should see a returned list of the data (custom api).
 
+## Schemas
+
+The schemas are created inside of the models.py file
+
 ### Developer notes
 
 ```bash
