@@ -3,9 +3,11 @@ from bs4 import BeautifulSoup
 import json
 
 def scrape_job_data(url):
-    response = requests.get(url)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+    }
+    response = requests.get(url, headers=headers)
     if response.status_code == 200:
-        print(response.content)  # Print the HTML content for debugging purposes
         soup = BeautifulSoup(response.content, 'html.parser')
         job_blocks = soup.select('div.job.accordion')
 
