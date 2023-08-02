@@ -31,3 +31,4 @@ The schemas are created inside of the models.py file
 ```bash
 pip freeze > requirements.txt
 ```
+
